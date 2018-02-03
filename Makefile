@@ -3,7 +3,7 @@ NAME=mlcollege/introduction-to-ml
 all: pull build run
 
 run:
-	docker run -ti --rm -p 9999:8888 -v $(shell pwd)/src:/src -v $(shell pwd)/data:/data $(NAME)
+	docker run -ti --rm -p 9999:8888 -v $(shell pwd)/src:/src  $(NAME)
 
 build:
 	docker build -t $(NAME) .
